@@ -1,0 +1,8 @@
+{
+  "name": "Experts Automotive Center",
+  "description": "Official website for Experts Automotive Center garage featuring about us, branch information, gallery, and service booking system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
