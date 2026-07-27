@@ -127,18 +127,24 @@ export default function App() {
               
               {/* Footer Social Media links */}
               <div className="flex items-center space-x-2.5 pt-4" id="footer_socials_row">
-                <div 
-                  className="p-2 bg-white/5 border border-white/5 rounded-lg text-white/30 cursor-help"
-                  title="Instagram (Coming Soon)"
+                <a 
+                  href="https://www.instagram.com/eac.qa?igsh=MWk5N3N0d2lsb2x0bw%3D%3D&utm_source=qr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/5 hover:bg-[#E31B23] hover:text-white border border-white/5 hover:border-[#E31B23]/20 rounded-lg text-white/50 transition-all duration-300"
+                  title="Follow us on Instagram"
                 >
                   <Instagram className="w-4 h-4" />
-                </div>
-                <div 
-                  className="p-2 bg-white/5 border border-white/5 rounded-lg text-white/30 cursor-help"
-                  title="Snapchat (Coming Soon)"
+                </a>
+                <a 
+                  href="https://snapchat.com/t/woEsmmAQ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 bg-white/5 hover:bg-[#E31B23] hover:text-white border border-white/5 hover:border-[#E31B23]/20 rounded-lg text-white/50 transition-all duration-300"
+                  title="Follow us on Snapchat"
                 >
                   <Ghost className="w-4 h-4" />
-                </div>
+                </a>
                 <a 
                   href="https://www.facebook.com/share/1Cph5nrsUg/" 
                   target="_blank" 
@@ -149,7 +155,7 @@ export default function App() {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://www.tiktok.com/@experts.automotiv?_r=1&_t=ZS-97a5o5dh6Ie" 
+                  href="https://www.tiktok.com/@eac.qa?_r=1&_t=ZS-98Lqznep4vl" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 bg-white/5 hover:bg-[#E31B23] hover:text-white border border-white/5 hover:border-[#E31B23]/20 rounded-lg text-white/50 transition-all duration-300"

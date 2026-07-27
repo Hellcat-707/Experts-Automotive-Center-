@@ -7,30 +7,30 @@ export default function SocialLinks() {
     {
       id: "instagram",
       name: "Instagram",
-      handle: "@experts.automotive",
-      url: null,
+      handle: "@eac.qa",
+      url: "https://www.instagram.com/eac.qa?igsh=MWk5N3N0d2lsb2x0bw%3D%3D&utm_source=qr",
       description: "Watch daily stories of supercar maintenance, engine builds, and diagnostics in action.",
       icon: Instagram,
       colorClass: "hover:border-[#E1306C]/40 group-hover:text-[#E1306C] text-[#E1306C]/80",
       glowColor: "rgba(225,48,108,0.15)",
-      badge: "Staging Page"
+      badge: "Official Page"
     },
     {
       id: "snapchat",
       name: "Snapchat",
-      handle: "@experts.automotive",
-      url: null,
+      handle: "@eac.qa",
+      url: "https://snapchat.com/t/woEsmmAQ",
       description: "Discover behind-the-scenes garage moments and real-time repair highlights on Snapchat.",
       icon: Ghost,
       colorClass: "hover:border-[#FFFC00]/40 group-hover:text-[#FFFC00] text-[#FFFC00]/80",
       glowColor: "rgba(255,252,0,0.1)",
-      badge: "Coming Soon"
+      badge: "Snapchat Lens"
     },
     {
       id: "tiktok",
       name: "TikTok",
-      handle: "@experts.automotiv",
-      url: "https://www.tiktok.com/@experts.automotiv?_r=1&_t=ZS-97a5o5dh6Ie",
+      handle: "@eac.qa",
+      url: "https://www.tiktok.com/@eac.qa?_r=1&_t=ZS-98Lqznep4vl",
       description: "Catch short-form videos showing deep computer diagnostics and before-after transformations.",
       icon: Video,
       colorClass: "hover:border-[#00f2fe]/40 group-hover:text-[#00f2fe] text-[#00f2fe]/80",
@@ -40,7 +40,7 @@ export default function SocialLinks() {
     {
       id: "facebook",
       name: "Facebook",
-      handle: "Experts Automotive Doha",
+      handle: "Experts Automotive Center",
       url: "https://www.facebook.com/share/1Cph5nrsUg/",
       description: "Read client testimonials, book service alerts, and find official announcements and branches.",
       icon: Facebook,

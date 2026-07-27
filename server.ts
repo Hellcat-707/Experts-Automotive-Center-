@@ -181,7 +181,7 @@ async function sendCustomerConfirmationEmail(booking: any): Promise<boolean> {
   const emailText = `
     Dear ${booking.fullName},
 
-    We are pleased to inform you that your service booking has been confirmed! We are looking forward to having you at Experts Automotive Center.
+    we are pleased to inform you that your service booking has been confirmed! and we are looking forward to have you in our garage.
 
     Booking Details:
     ------------------
@@ -191,11 +191,13 @@ async function sendCustomerConfirmationEmail(booking: any): Promise<boolean> {
     Appointment Date: ${booking.date}
     Location: ${booking.branch}
 
+    Collection Details:
+    Please visit us at our main facility in the Industrial Area (Street 8). Our doors are open Saturday – Thursday: 8:30 AM – 1:00 PM & 4:00 PM – 8:30 PM.
+    Google Maps Location: https://maps.app.goo.gl/UPrV7fg5f9HXbN9D7
+
     If you need to change your appointment or have any questions, please contact us at:
     Phone: +974 30038280
     Email: expertsautomotive3@gmail.com
-
-    We would like to confirm for you your booking and we are looking forward to have you in our garage.
 
     Best regards,
     The Experts Automotive Center Team
@@ -211,7 +213,7 @@ async function sendCustomerConfirmationEmail(booking: any): Promise<boolean> {
         <p style="font-size: 16px; margin-top: 0; color: #111111;">Dear <strong>${booking.fullName}</strong>,</p>
         
         <p style="font-size: 15px; color: #444444;">
-          We are pleased to inform you that your service booking has been <strong>confirmed</strong>! We would like to confirm for you your booking and we are looking forward to have you in our garage.
+          we are pleased to inform you that your service booking has been <strong>confirmed</strong>! and we are looking forward to have you in our garage.
         </p>
 
         <div style="background-color: #f9f9f9; padding: 20px; border-left: 4px solid #dc2626; border-radius: 4px; margin: 24px 0;">
@@ -238,6 +240,19 @@ async function sendCustomerConfirmationEmail(booking: any): Promise<boolean> {
               <td style="padding: 4px 0; color: #111111; font-size: 14px;">${booking.branch}</td>
             </tr>
           </table>
+        </div>
+
+        <div style="background-color: #eff6ff; padding: 16px; border-radius: 8px; margin-bottom: 24px; border: 1px solid #bfdbfe;">
+          <p style="margin: 0; font-size: 14px; color: #1e40af; font-weight: bold;">📍 Collection Details:</p>
+          <p style="margin: 4px 0 8px 0; font-size: 13px; color: #1e3a8a;">
+            Please visit us at our main facility in the <strong>Industrial Area (Street 8)</strong>. 
+            Our doors are open Saturday – Thursday: 8:30 AM – 1:00 PM & 4:00 PM – 8:30 PM.
+          </p>
+          <p style="margin: 8px 0 0 0;">
+            <a href="https://maps.app.goo.gl/UPrV7fg5f9HXbN9D7" target="_blank" style="display: inline-block; background-color: #dc2626; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 13px; padding: 8px 16px; border-radius: 6px;">
+              📍 Open Location in Google Maps
+            </a>
+          </p>
         </div>
 
         <p style="font-size: 14px; color: #444444; margin-bottom: 0;">
@@ -299,23 +314,22 @@ async function sendCustomerPickupReadyEmail(booking: any): Promise<boolean> {
   const emailText = `
     Dear ${booking.fullName},
 
-    Great news! We have successfully completed the service and repairs on your vehicle at Experts Automotive Center. Your car is now fully ready for pickup!
+    Great news! We have successfully completed the service and repairs on your vehicle. Your car is now fully ready for pickup! You are welcome to come and pick it up at your earliest convenience.
 
     Vehicle Details:
     ------------------
+    Booking ID: ${booking.id}
     Vehicle: ${booking.year} ${booking.brand} ${booking.model}
     Service Completed: ${booking.serviceType}
     Location: ${booking.branch}
 
-    You can come to our garage anytime during our working hours to pick up your vehicle:
-    Saturday – Thursday: 8:00 AM – 1:00 PM & 3:00 PM – 8:00 PM
-    Friday: Closed
+    Collection Details:
+    Please visit us at our main facility in the Industrial Area (Street 8). Our doors are open Saturday – Thursday: 8:30 AM – 1:00 PM & 4:00 PM – 8:30 PM.
+    Google Maps Location: https://maps.app.goo.gl/UPrV7fg5f9HXbN9D7
 
     Contact Details:
     Phone: +974 30038280
     Email: expertsautomotive3@gmail.com
-
-    We have successfully completed all work on your car, and we are looking forward to seeing you for the pickup.
 
     Best regards,
     The Experts Automotive Center Team
@@ -358,9 +372,14 @@ async function sendCustomerPickupReadyEmail(booking: any): Promise<boolean> {
 
         <div style="background-color: #eff6ff; padding: 16px; border-radius: 8px; margin-bottom: 24px; border: 1px solid #bfdbfe;">
           <p style="margin: 0; font-size: 14px; color: #1e40af; font-weight: bold;">📍 Collection Details:</p>
-          <p style="margin: 4px 0 0 0; font-size: 13px; color: #1e3a8a;">
+          <p style="margin: 4px 0 8px 0; font-size: 13px; color: #1e3a8a;">
             Please visit us at our main facility in the <strong>Industrial Area (Street 8)</strong>. 
-            Our doors are open Saturday – Thursday: 8:00 AM – 1:00 PM & 3:00 PM – 8:00 PM.
+            Our doors are open Saturday – Thursday: 8:30 AM – 1:00 PM & 4:00 PM – 8:30 PM.
+          </p>
+          <p style="margin: 8px 0 0 0;">
+            <a href="https://maps.app.goo.gl/UPrV7fg5f9HXbN9D7" target="_blank" style="display: inline-block; background-color: #dc2626; color: #ffffff; text-decoration: none; font-weight: bold; font-size: 13px; padding: 8px 16px; border-radius: 6px;">
+              📍 Open Location in Google Maps
+            </a>
           </p>
         </div>
 
@@ -394,7 +413,7 @@ async function sendCustomerPickupReadyEmail(booking: any): Promise<boolean> {
       await transporter.sendMail({
         from: `"Experts Automotive Center" <${smtpUser}>`,
         to: booking.email.trim(),
-        subject: `[Ready for Pickup] Your Vehicle is Ready! #${booking.id} - Experts Automotive Center`,
+        subject: `Your Vehicle is Ready to pickup! #${booking.id} - Experts Automotive Center`,
         text: emailText,
         html: emailHtml,
       });

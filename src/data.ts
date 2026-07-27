@@ -16,9 +16,9 @@ export const CONTACT_INFO = {
 };
 
 export const WORKING_HOURS = {
-  days: "Saturday to Thursday",
-  morning: "8:30 AM - 1:00 PM",
-  evening: "4:00 PM - 8:30 PM",
+  days: "Saturday – Thursday",
+  morning: "8:30 AM – 1:00 PM",
+  evening: "4:00 PM – 8:30 PM",
   closed: "Friday",
 };
 
